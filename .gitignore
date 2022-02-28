@@ -127,3 +127,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 /.idea/*
+/resources/workloads/temp_workload_current.sql
+/resources/workloads/temp_workload_last_run.sql
+/resources/workloads/temp_workload_optimal.sql
