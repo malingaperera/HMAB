@@ -749,7 +749,6 @@ def get_estimated_size_of_mv_v2(connection, payload, mv_query, count_query, coun
         except:
             if not is_gb:
                 count_numbers[count_query_id] = -1
-            print("Error with count query:\n ", count_query)
             estimated_rows = -1
 
     if estimated_rows > 0:
