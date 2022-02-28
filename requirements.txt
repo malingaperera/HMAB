@@ -1,0 +1,11 @@
+pytest
+numpy
+matplotlib
+pandas
+seaborn
+keras
+tensorflow
+pyodbc
+psycopg2
+# There are several python SQL drivers available. However, Microsoft places its testing efforts and its confidence in pyodbc driver.
+# https://docs.microsoft.com/en-us/sql/connect/python/python-driver-for-sql-server?view=sql-server-2017
