@@ -1,9 +1,10 @@
+
 # HMAB : Self-Driving Hierarchy of Bandits for Integrated Physical Database Design Tuning  
   
 ## Steps:
 
- 1. Setup the Database - In this example we use TPC-DS http://www.tpc.org/tpcds/
- 2. Set up the DB config file (config/db.conf). We have implemented the MSSQL DB layer, for any other DB you have to implement it. Set the 'server'  and 'database'.
+ 1. **Setup the Database** - In this example we use TPC-DS http://www.tpc.org/tpcds/
+ 2. **Set up the DB config file** (config/db.conf). We have implemented the MSSQL DB layer, for any other DB you have to implement it. Set the 'server'  and 'database'.
 
     [SYSTEM]  
     db_type = MSSQL  
@@ -19,8 +20,8 @@
     user = postgres  
     password = admin
 
-3. Create the workload. In our exmple we use generators in TPC-DS. Our solution does not provide query parsing. So we have used in-house scripts to parse the querys and generate the workload file (resources/workloads/ds_static_100.json) and query property file (resources/query_properties/tpc_ds.py).
-4. Create the experiment config (config/db.conf)
+3. **Create the workload**. In our exmple we use generators in TPC-DS. Our solution does not provide query parsing. So we have used in-house scripts to parse the querys and generate the workload file (resources/workloads/ds_static_100.json) and query property file (resources/query_properties/tpc_ds.py).
+4. **Create the experiment config** (config/db.conf)
 
     [example_tpc_ds]
     reps = 1  # How many repetitions\
@@ -45,6 +46,7 @@
     mab_versions = ["simulation.sim_c3ucb_vF"] # ignore\
     pds_selection = VIEW_AND_INDICES # use VIEW_AND_INDICES or INDEX_ONLY
 
-5. Set the explriment ID in simulation/sim_run_experiment.py
-6. Run experiment
-
+5. **Set the experiment ID** in simulation/sim_run_experiment.py
+6. **Run experiment**
+7. **Experiment results and Graphs**. All experiment results can be found in the experiments folder, under a sub folder by the name of your experiment (example_tpc_ds)
+8. **CSV Export**. A complete result export as a CSV (including component-wise breakdown per round) can be generated running shared/generate_csv_files.py
