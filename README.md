@@ -46,7 +46,6 @@
     mab_versions = ["simulation.sim_c3ucb_vF"] # ignore\
     pds_selection = VIEW_AND_INDICES # use VIEW_AND_INDICES or INDEX_ONLY
 
-5. **Set the experiment ID** in simulation/sim_run_experiment.py
-6. **Run experiment**
-7. **Experiment results and Graphs**. All experiment results can be found in the experiments folder, under a sub folder by the name of your experiment (example_tpc_ds)
-8. **CSV Export**. A complete result export as a CSV (including component-wise breakdown per round) can be generated running shared/generate_csv_files.py
+5. **Run experiment**. Set the experiment ID and run simulation/sim_run_experiment.py
+6. **Experiment results and Graphs**. All experiment results can be found in the experiments folder, under a sub folder by the name of your experiment (example_tpc_ds)
+7. **CSV Export**. A complete result export as a CSV (including component-wise breakdown per round) can be generated running shared/generate_csv_files.py
