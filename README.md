@@ -3,7 +3,7 @@
   
 ## Steps:
 
- 1. **Setup the Database** - In this example we use TPC-DS http://www.tpc.org/tpcds/
+ 1. **Setup the Database** - In this example we use 10GB TPC-DS http://www.tpc.org/tpcds/
  2. **Set up the DB config file** (config/db.conf). We have implemented the MSSQL DB layer, for any other DB you have to implement it. Set the 'server'  and 'database'.
 
     [SYSTEM]  
@@ -11,14 +11,14 @@
       
     [MSSQL]  
     server = SERVER_NAME  
-    database = TPCDS_001  
+    database = TPCDS
     driver = {SQL Server}  
       
     [PG]  
     server = localhost  
     database = pgtpch_001  
     user = postgres  
-    password = admin
+    password = password
 
 3. **Create the workload**. In our exmple we use generators in TPC-DS. Our solution does not provide query parsing. So we have used in-house scripts to parse the querys and generate the workload file (resources/workloads/ds_static_100.json) and query property file (resources/query_properties/tpc_ds.py).
 4. **Create the experiment config** (config/db.conf)
@@ -37,7 +37,7 @@
     config_shifts = [0] # ignore\
     config_start = [0] # ignore\
     config_end = [0] # ignore\
-    max_memory = 2500 # memory budget in MB\
+    max_memory = 25000 # memory budget in MB\
     input_alpha = 1 # exploration boost factor\
     input_lambda = 0.5\
     time_weight = 5 # ignore\
